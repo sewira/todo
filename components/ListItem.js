@@ -7,11 +7,10 @@ const ListItem = ({ item, deleteItem }) => {
     <TouchableOpacity style={styles.listItem}>
       <View style={styles.listVIew}>
         <Text style={styles.textItem}>{item.food}</Text>
-        <View style={styles.delete}>
-          <Text style={styles.delText} onPress={() => deleteItem(item.id)}>
-            X
-          </Text>
-        </View>
+
+        <Text style={styles.delText} onPress={() => deleteItem(item.id)}>
+          X
+        </Text>
       </View>
     </TouchableOpacity>
   );
@@ -30,15 +29,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textItem: {
-    fontSize: 15,
+    fontSize: 25,
   },
-  delete: {
-    backgroundColor: "red",
-    paddingHorizontal: 15,
-    height: 15,
-    alignItems: "center",
-  },
+
   delText: {
-    fontSize: 10,
+    fontSize: 30,
+    color: "red",
   },
 });
